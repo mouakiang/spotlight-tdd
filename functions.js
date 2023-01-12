@@ -14,8 +14,9 @@ Output:
 
 */
 
-export function addExclamationPoints() {
-    return true;
+export function addExclamationPoints(string) {
+    console.log(string);
+    return string + '!!!';
 }
 
 // This function should take in a number and multiply it by seven
@@ -31,7 +32,8 @@ Output:
 */
 
 export function multiplyBySeven(num) {
-    return true;
+    console.log(num);
+    return num * 7;
 }
 
 // This function should take in a number and multiply it by twelve then cut the result in half
@@ -144,7 +146,6 @@ Output:
 'plum'
 
 */
-
 
 // ======================================= STRETCH GOALS ============================================
 
