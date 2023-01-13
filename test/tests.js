@@ -2,6 +2,8 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    getSecondItem,
+    makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
     returnAsAnArray,
@@ -128,4 +130,44 @@ test('this test should take three numbers and return those numbers mushed togeth
     const actual2 = returnAsAString(4, 5, 6);
 
     expect.deepEqual(actual2, expected2, '4, 5, 6 = 456');
+});
+
+test('this test should take two numbers and return todays lucky number in a greeting', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12';
+
+    const actual = makeLuckyGreeting(8, 4);
+
+    expect.deepEqual(actual, expected, '8 + 4 = Hello! Your lucky number for the day is 12');
+
+    const expected1 = 'Hello! Your lucky number for the day is 14';
+
+    const actual1 = makeLuckyGreeting(9, 5);
+
+    expect.deepEqual(actual1, expected1, '9 + 5 = Hello! Your lucky number for the day is 14');
+
+    const expected2 = 'Hello! Your lucky number for the day is 15';
+
+    const actual2 = makeLuckyGreeting(10, 5);
+
+    expect.deepEqual(actual2, expected2, '10 + 5 = Hello! Your lucky number for the day is 15');
+});
+
+test('this test should take an array and return the second item in the array', (expect) => {
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'kiwi, apple, orange, plum = apple');
+
+    const expected1 = 'blue';
+
+    const actual1 = getSecondItem(['orange', 'blue', 'red', 'pink']);
+
+    expect.deepEqual(actual1, expected1, 'orange, blue, red, pink = blue');
+
+    const expected2 = '1';
+
+    const actual2 = getSecondItem(['0', '1', '2', '3']);
+
+    expect.deepEqual(actual2, expected2, '0, 1, 2, 3 = 1');
 });
